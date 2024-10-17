@@ -4,3 +4,10 @@
 # Пример: ввод N = 6
 # [1,2,3,4,5,6]
 # Вывод: [3,2,1,6,5,4]
+from random import randint
+
+n = int(input())
+lst = [randint(-100, 100) for _ in range(n)]
+print(lst)
+lst = lst[n // 2 - 1::-1] + lst[:n // 2 - 1:-1]
+print(lst)
