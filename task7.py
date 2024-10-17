@@ -5,7 +5,6 @@
 # [20, -90, 15, -34, 10, 0]
 # Вывод: [20, 15, 10, -90, -34, 0]
 from random import randint
-
 n = int(input())
 lst = [randint(-100, 100) for _ in range(n)]
 print(lst)
