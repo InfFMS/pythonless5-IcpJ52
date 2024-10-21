@@ -9,9 +9,14 @@ n = int(input())
 lst = [randint(0, 1000) for _ in range(n)]
 print(lst)
 mean = sum(lst) / n
-try:
-    lst.remove(1.3 * mean)
-    lst.remove(0.7 * mean)
-except ValueError:
-    pass
+while True:
+    try:
+        lst.remove(1.3 * mean)
+    except ValueError:
+        break
+while True:
+    try:
+        lst.remove(0.7 * mean)
+    except ValueError:
+        break
 print(lst)
